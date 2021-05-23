@@ -6,10 +6,10 @@ function Footer() {
 
   const cy = date.getFullYear();
   return (
-    <div className="Footer">
+    <footer className="Footer">
       <p>All rights are Reserved </p>
       <p>Copyright {cy} </p>
-    </div>
+    </footer>
   );
 }
 export default Footer;

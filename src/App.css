@@ -37,3 +37,59 @@
     transform: rotate(360deg);
   }
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Ubuntu,Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+
+Header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+Header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+Footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 98.5%;
+  height: 2.5rem;
+}
+
+Footer p {
+  color: rgb(180, 180, 180);
+}
+.Note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.Note h2 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.Note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
