@@ -60,14 +60,26 @@ Footer p {
 }
 
 .AddNote {
-  text-align: center;
-  border: solid grey 1px;
+  position: relative;
+  align-items: center;
+  left: 30%;
+  width: 40%;
+  margin: 1em 0;
+
   border-radius: 7px;
   padding: 2rem;
   background-color: white;
 }
-
 .AddNote > input {
-  padding: 0.6rem;
   border: none;
+  font-size: 20px;
+  margin: 0.5em 0;
+}
+.AddIcon {
+  position: relative;
+  left: 90%;
+  width: fit-content;
+}
+.AddIcon :hover {
+  cursor: pointer;
 }

@@ -4,6 +4,7 @@ function AddNote({ onAdd }) {
   const [note, setNote] = useState({
     title: "",
     content: "",
+    isDone: false,
   });
 
   const handleOnChange = (event) => {
@@ -15,11 +16,19 @@ function AddNote({ onAdd }) {
 
   const submitNote = (e) => {
     e.preventDefault();
-    onAdd(note);
-    setNote({
-      title: "",
-      content: "",
-    });
+    if (note.title.length === 0) {
+      alert("Title must be filled");
+      return;
+    } else if (note.content.length === 0) {
+      alert("Content must be filled");
+      return;
+    } else {
+      onAdd(note);
+      setNote({
+        title: "",
+        content: "",
+      });
+    }
   };
   return (
     <div className="AddNote">
@@ -39,7 +48,10 @@ function AddNote({ onAdd }) {
         name="content"
       />{" "}
       <br />
-      <AddIcon onClick={submitNote}>Add Note</AddIcon>
+      <div className="AddIcon">
+        <AddIcon onClick={submitNote}> Add Note</AddIcon>
+      </div>
+      {/* <button onClick={submitNote}>Add Note</button> */}
     </div>
   );
 }

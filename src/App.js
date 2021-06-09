@@ -12,12 +12,19 @@ function App() {
       return [...prevValues, note];
     });
   };
+
+  const handleIsDone = (id) => {};
+
   const handleDelete = (id) => {
-    setNotes((prevItems) => {
-      return prevItems.filter((noteItem, index) => {
-        return index !== id;
+    if (window.confirm("This task will be permanently deleted ?")) {
+      setNotes((prevItems) => {
+        return prevItems.filter((noteItem, index) => {
+          return index !== id;
+        });
       });
-    });
+    } else {
+      return;
+    }
   };
   return (
     <div className="App">
@@ -31,6 +38,7 @@ function App() {
             title={noteItem.title}
             content={noteItem.content}
             onDelete={handleDelete}
+            isDone={handleIsDone}
           />
         );
       })}

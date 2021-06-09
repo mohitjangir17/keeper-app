@@ -1,15 +1,13 @@
 import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-function Note({ title, content, onDelete, id }) {
-  const handleDelete = () => {
-    onDelete();
-  };
+function Note({ title, content, onDelete, id, isDone }) {
   return (
-    <div className="Note">
+    <div onClick={() => isDone(id)} className="Note">
       <h2>{title}</h2>
       <p>{content}</p>
       <DeleteIcon onClick={() => onDelete(id)}></DeleteIcon>
+      {/* <button onClick={() => onDelete(id)}>Delete</button> */}
     </div>
   );
 }
